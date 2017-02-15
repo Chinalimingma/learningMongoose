@@ -1,0 +1,9 @@
+extends layout
+
+block content   
+  form(id="formUserLogin", method="post", action="")
+    label(for="Email") Email
+    input(type="email", name="Email", id="Email")
+    input(type="submit", value="Login")
+  p Or new users can 
+    a(href="/user/new") sign up

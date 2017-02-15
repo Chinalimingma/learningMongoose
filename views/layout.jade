@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+  include ./partial/_head.jade
+  
+  body
+    include ./partial/_loginModal.jade    
+    include ./partial/_navbar.jade
+    div.container
+      block content
+        
+    script(src='js/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    block script

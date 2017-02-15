@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    h1 Mongoose Project Management
+    h2= name
+    p Email: #{email}
+    h3 Actions
+    ul
+      li
+        a(href="/project/new" class='btn btn-primary btn-md') Create a new project
+      li
+        a(href="/user/edit" class='btn btn-info btn-md') Edit user info
+      li
+        a(href="/user/delete" class='btn btn-danger btn-md') Delete #{name}
+      li
+        a(href="/logout" class='btn btn-default btn-md') Logout #{name}
+    h3 My projects
+    ul#myprojects
+    
+
+block script
+  script var userID = "#{userID}"; 
+  script(src="js/user.js")  
+

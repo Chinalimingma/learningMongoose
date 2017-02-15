@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    form(id="frmUserProfile", method="post", action="")
+      div.form-group
+        label(for="FullName") Full name
+        input.form-control(type="text", id="FullName", name="FullName" placeholder="Enter name")
+      div.form-group
+      label(for="Email") Email
+      input.form-control(type="email", id="Email", name="Email", placeholder="Enter email")
+      div.btn-group
+        button.btn.btn-primary(type="submit", value='Create') Create
+        button.btn.btn-info(type="reset", name='reset' value='Reset') Reset
+        
+
+

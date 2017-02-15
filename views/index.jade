@@ -1,0 +1,33 @@
+
+extends layout
+
+block content   
+  h1= title
+  p Welcome to #{title}  
+    h3 Users
+    a(href='user/new' class='btn btn-info btn-md') Create User  
+  div.container.row
+    each user in users
+      div.col-lg-3.panel.panel-default
+        div.panel-heading= user.name
+        div.panel-body= user.email 
+        div.panel-foot
+          div.btn-group
+            button.btn.btn-primary.btn-sm Detail
+            button.btn.btn-danger.btn-sm Remove      
+  h3 Project
+  div.list-group.row
+  each project in projects
+    a.list-group-item.col-lg-3(href="#")
+      h4.list-group-item-heading= project.projectName
+      div.btn-group
+        button.btn.btn-primary.btn-sm Detail
+        button.btn.btn-danger.btn-sm Remove
+  
+  div.row
+  h3 Action     
+  ul
+    li
+      a(href="/login") Login
+    li
+      a(href="/user/new") Sign up

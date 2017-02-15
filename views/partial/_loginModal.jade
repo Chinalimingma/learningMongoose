@@ -1,0 +1,39 @@
+// Modal
+#userLogin.modal.fade(role='dialog')
+  .modal-dialog
+    // Modal content
+    .modal-content
+      .modal-header(style='padding:35px 50px;')
+        button.close(type='button', data-dismiss='modal') ×
+        h4
+          span.glyphicon.glyphicon-lock
+          |  Login
+      .modal-body(style='padding:40px 50px;')
+        form(method='post', action='/login', role='form')
+          .form-group
+            label(for='Email')
+              span.glyphicon.glyphicon-email
+              |  Email
+            input#email.form-control(type='text', placeholder='Enter email')
+          .form-group
+            label(for='psw')
+              span.glyphicon.glyphicon-eye-open
+              |  Password
+            input#psw.form-control(type='text', placeholder='Enter password')
+          .checkbox
+            label
+              input(type='checkbox', value='', checked='')
+              | Remember me
+          button.btn.btn-success.btn-block(type='submit')
+            span.glyphicon.glyphicon-off
+            |  Login
+      .modal-footer
+        button.btn.btn-danger.btn-default.pull-left(type='submit', data-dismiss='modal')
+          span.glyphicon.glyphicon-remove
+          |  Cancel
+        p
+          | Not a member? 
+          a(href='#') Sign Up
+        p
+          | Forgot 
+          a(href='#') Password?
